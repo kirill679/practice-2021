@@ -1,0 +1,35 @@
+<h2>Добавить экзамен</h2>
+<p>Данная страница еще не готова, пока что можно добавить только демонстрационный тест (вопросы будут созданы автоматически)</p>
+{{#if qualificationsGroups.length}}
+  <div class="row">
+    <div class="col s12">
+      <form action="/aqc/exams/add" method="POST" autocomplete="off">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="title" type="text" class="validate" name="examTitle" required>
+            <label for="title">Название экзамена</label>
+            <span class="helper-text" data-error="Некорректное название"></span>
+          </div>
+          <div class="input-field col s6">
+            <select name="qualificationId" required>
+              <option value="" disabled selected>Выберите квалификацию</option>
+              {{#each qualificationsGroups}}
+                {{#if qualifications.length}}
+                  <optgroup label="{{professionTitle}}">
+                    {{#each qualifications}}
+                      <option value="{{_id}}">{{../professionTitle}}, уровень {{degree}}</option>
+                    {{/each}}
+                  </optgroup>
+                {{/if}}
+              {{/each}}
+            </select>
+          </div>
+        </div>
+        <button class="btn waves-effect waves-light blue darken-3" type="submit"><i class="material-icons left">done</i>Добавить
+        </button>
+      </form>
+    </div>
+  </div>
+{{else}}
+  <h5>Сначала необходимо добавить квалификацию</h5>
+{{/if}}

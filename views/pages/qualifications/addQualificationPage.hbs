@@ -1,0 +1,32 @@
+<h2>Добавить квалификацию</h2>
+{{#if professions.length}}
+<br>
+<div class="row">
+  <div class="col s12">
+    <form action="/qualifications/add" method="POST" autocomplete="off">
+      <div class="col s6 input-field">
+        <select name="professionId" required>
+          <option value="" disabled selected>Выберите профессию</option>
+          {{#each professions}}
+            <option value="{{_id}}" class="blue-text text-darken-3">{{title}}</option>
+          {{/each}}
+        </select>
+      </div>
+      <div class="input-field col s6">
+        <input id="degree" type="number" class="validate" name="degree" required min="1">
+        <label for="degree">Уровень</label>
+        <span class="helper-text" data-error="Некорректный уровень"></span>
+      </div>
+      <div class="input-field col s12">
+        <textarea id="textarea" class="materialize-textarea validate" name="description" required></textarea>
+        <label for="textarea">Описание</label>
+        <span class="helper-text" data-error="Некорректное описание"></span>
+      </div>
+      <button class="btn waves-effect waves-light blue darken-3" type="submit"><i class="material-icons left">done</i>Добавить
+      </button>
+    </form>
+  </div>
+</div>
+{{else}}
+  <h5>Сначала необходимо добавить профессию</h5>
+{{/if}}

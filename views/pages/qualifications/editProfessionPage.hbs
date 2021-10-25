@@ -1,0 +1,24 @@
+<h1 class="px">Редактировать профессию</h1>
+
+<div class="row">
+  <div class="col s12">
+    <form action="/qualifications/professions/edit" method="POST" autocomplete="off">
+      <div class="col s12 input-field">
+        <input type="text" name="title" id="title" class="validate" required value="{{profession.title}}">
+        <label for="title">Название профессии</label>
+        <span class="helper-text" data-error="Некорректное название"></span>
+      </div>
+      <input type="hidden" name="id" value="{{profession._id}}">
+      <button class="btn waves-effect waves-light blue darken-3" type="submit"><i class="material-icons left">done</i>Сохранить</button>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <form action="/qualifications/professions/delete" method="POST">
+      <input type="hidden" name="id" value="{{profession._id}}">
+      <button class="btn waves-effect waves-light red darken-1"><i class="material-icons left">delete</i>Удалить профессию</button>
+    </form>
+  </div>
+</div>

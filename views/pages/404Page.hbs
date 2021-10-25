@@ -1,0 +1,20 @@
+<h1>Ошибка 404</h1>
+<h4>К сожалению, такой страницы нет</h4>
+<div class="section">
+  <h5>Воспользуйтесь навигацией ниже, чтобы найти нужную страницу</h5>
+  <br>
+  <div class="collection">
+    <a href="/" class="collection-item blue-text text-darken-3">Главная</a>
+    {{#if isAuth}}
+      <a href="/aqc" class="collection-item blue-text text-darken-3">ЦОК</a>
+    {{/if}}
+    <a href="/qualifications" class="collection-item blue-text text-darken-3">Квалификации</a>
+    <a href="/news" class="collection-item blue-text text-darken-3">Новости</a>
+    <a href="/docs" class="collection-item blue-text text-darken-3">Документы</a>
+    <a href="/contacts" class="collection-item blue-text text-darken-3">Контакты</a>
+  </div>
+</div>
+<h5 class="mb2">Если у вас остались вопросы, пожалуйста, перейдите на страницу <a href="/contacts"
+                                                                                  class="blue-text text-darken-3">Контакты</a>
+  и свяжитесь с нами</h5>
+<br>

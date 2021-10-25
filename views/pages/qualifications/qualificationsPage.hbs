@@ -1,0 +1,35 @@
+<h2>Квалификации</h2>
+{{#if qualificationsGroups.length}}
+  {{#each qualificationsGroups}}
+    {{#if qualifications.length}}
+      <div class="section">
+        <h4 class="mt0">{{professionTitle}}</h4>
+        <ul class="collapsible">
+          {{#each qualifications}}
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons left">expand_more</i>
+                <strong class="truncate">{{../professionTitle}}, уровень {{degree}}</strong>
+                {{#if @root.isAuth}}
+                  {{#if @root.isAdmin}}
+                  <a href="/qualifications/{{_id}}/edit"
+                     class="qualifications-item-link blue-text text-darken-3">Изменить</a>
+                  {{/if}}
+                {{/if}}
+              </div>
+              <div class="collapsible-body">
+                <p class="">
+                  {{description}}
+                </p>
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/if}}
+  {{/each}}
+{{else}}
+  <h5>Квалификации еще не добавлены</h5>
+{{/if}}
+
+

@@ -1,0 +1,33 @@
+<h3>{{test.title}}</h3>
+<h5 class="mb2">Квалификация: {{profession.title}}, уровень {{qualification.degree}}</h5>
+<div class="section">
+  <form action="/aqc/tests/check" method="POST">
+    <div class="row">
+      <div class="col s10 offset-s1">
+        <ul class="tabs mb2">
+          {{#each questionsGroups}}
+            <li class="tab col s1"><a href="#{{inc @index}}">{{inc @index}}</a></li>
+          {{/each}}
+        </ul>
+      </div>
+      {{#each questionsGroups}}
+        <div id="{{inc @index}}" class="col s10 offset-s1">
+          <h5 class="mb2">{{questionTitle}}</h5>
+          {{#each answers}}
+            <div class="row">
+              <div class="col s12">
+                <label>
+                  <input type="checkbox" name="{{questionNumber}}-{{answerNumber}}"/>
+                  <span>{{answerTitle}}</span>
+                </label>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      {{/each}}
+      <input type="hidden" value="{{test._id}}" name="testId">
+      <button class="btn waves-effect waves-light blue darken-3 col offset-s1 mt2" type="submit"><i class="material-icons left">done</i>Завершить
+      </button>
+    </div>
+  </form>
+</div>

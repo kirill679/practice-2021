@@ -1,0 +1,310 @@
+{{#if news.length}}
+  <div class="section">
+    <h2>Последние новости</h2>
+    <div class="slider">
+      <ul class="slides">
+        {{#each news}}
+          <li>
+            <a href="/news/id/{{_id}}">
+              <img src="{{imgUrl}}" alt="{{title}}">
+              <div class="caption center-align">
+                <h3 class="grey-text text-lighten-3">{{title}}</h3>
+                <h5 class="light grey-text text-lighten-3 truncate">{{text}}</h5>
+              </div>
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+{{/if}}
+
+{{#if isAuth}}
+  <div class="section">
+    <h3>Центр оценочных квалификаций</h3>
+    <div class="row mt2">
+      <div class="col s4">
+        <a href="/aqc/tests">
+          <div class="card">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 center">
+                  <i class="material-icons main-aqc-card-icon blue-text text-darken-3">quiz</i>
+                </div>
+              </div>
+
+            </div>
+            <div class="card-action center">
+              <div class="blue-text text-darken-3 aqc-category-card-title">Тесты</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col s4">
+        <a href="/aqc/exams">
+          <div class="card">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 center">
+                  <i class="material-icons main-aqc-card-icon blue-text text-darken-3">description</i>
+                </div>
+              </div>
+
+            </div>
+            <div class="card-action center">
+              <div class="blue-text text-darken-3 aqc-category-card-title">Экзамены</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col s4">
+        <a href="/aqc/courses">
+          <div class="card">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 center">
+                  <i class="material-icons main-aqc-card-icon blue-text text-darken-3">school</i>
+                </div>
+              </div>
+
+            </div>
+            <div class="card-action center">
+              <div class="blue-text text-darken-3 aqc-category-card-title">Курсы</div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+{{else}}
+  <h5 class="mt2 mb2">Войдите в аккаунт, чтобы получить доступ к Центру оценочных квалификаций</h5>
+{{/if}}
+
+<div class="section">
+  <h3>Основные документы</h3>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i>Первый документ</div>
+      <div class="collapsible-body taj">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem deserunt dicta dolor doloribus expedita
+          explicabo iste libero minima pariatur, perferendis porro rem reprehenderit saepe vel vitae voluptate?
+        </p>
+        <p>
+          Aperiam aspernatur blanditiis consequuntur error in minima nihil, numquam veniam voluptatem. Accusantium
+          earum error
+          ex facere, id, ipsa labore maiores maxime nostrum numquam optio, provident quisquam repellat vitae
+          voluptate?
+        </p>
+        <p>
+          At atque beatae eos laboriosam maxime praesentium repudiandae sint soluta tempora vero! Ab consequuntur
+          dolorum recusandae similique.
+        </p>
+        <p>
+          Accusamus hic in ipsam iste maiores minus, nesciunt quam sit tempora totam ut
+          veniam vero voluptas. At est ipsam iste modi nesciunt nostrum praesentium suscipit tenetur totam vitae.
+          Aliquid at atque, deleniti deserunt dolor dolores fuga impedit in, inventore laborum nostrum nulla odio
+          omnis
+          porro, quia suscipit vel vero.
+        </p>
+        <p>
+          Alias commodi consequatur, deleniti dolor esse expedita incidunt magni nemo
+          neque nostrum, officia quia repudiandae sed suscipit unde vel veniam voluptate? Aliquid asperiores at
+          blanditiis deserunt dolores earum eligendi ex, inventore ipsam iusto magni maiores mollitia natus nemo,
+          non
+          obcaecati officiis quibusdam quisquam quod quos reiciendis reprehenderit repudiandae temporibus voluptas
+          voluptatibus.
+        </p>
+        <p>
+          Accusamus adipisci aliquid amet aspernatur aut autem corporis culpa delectus deleniti dicta
+          dignissimos distinctio dolor, earum ex exercitationem illo incidunt ipsam laudantium mollitia nihil nisi
+          nostrum omnis provident quibusdam, quos recusandae rem reprehenderit repudiandae rerum sapiente sint
+          soluta
+          suscipit temporibus unde velit, voluptas voluptates!
+        </p>
+        <p>
+          Nemo, pariatur, totam? Aliquam atque eaque excepturi
+          explicabo facere fuga itaque labore, minima mollitia necessitatibus nemo, odit officia omnis pariatur
+          porro
+          possimus ratione repudiandae soluta suscipit vitae.
+        </p>
+        <p>
+          Facilis fugit laudantium nihil praesentium? Ab animi
+          consequuntur dicta error esse, facilis itaque maxime quam ratione sequi tempore ut. Alias blanditiis
+          deserunt
+          fugiat laboriosam natus odio praesentium sunt tempore velit. Dicta incidunt nam nesciunt nihil, saepe
+          soluta
+          tempora temporibus veritatis?
+        </p>
+        <p>
+          Adipisci animi est maxime totam. Aliquid autem, cum dolore eaque illum mollitia
+          possimus repellendus vel.
+        </p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i>Второй документ</div>
+      <div class="collapsible-body taj">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem deserunt dicta dolor doloribus expedita
+          explicabo iste libero minima pariatur, perferendis porro rem reprehenderit saepe vel vitae voluptate?
+        </p>
+        <p>
+          Aperiam aspernatur blanditiis consequuntur error in minima nihil, numquam veniam voluptatem. Accusantium
+          earum error
+          ex facere, id, ipsa labore maiores maxime nostrum numquam optio, provident quisquam repellat vitae
+          voluptate?
+        </p>
+        <p>
+          At atque beatae eos laboriosam maxime praesentium repudiandae sint soluta tempora vero! Ab consequuntur
+          dolorum recusandae similique.
+        </p>
+        <p>
+          Accusamus hic in ipsam iste maiores minus, nesciunt quam sit tempora totam ut
+          veniam vero voluptas. At est ipsam iste modi nesciunt nostrum praesentium suscipit tenetur totam vitae.
+          Aliquid at atque, deleniti deserunt dolor dolores fuga impedit in, inventore laborum nostrum nulla odio
+          omnis
+          porro, quia suscipit vel vero.
+        </p>
+        <p>
+          Alias commodi consequatur, deleniti dolor esse expedita incidunt magni nemo
+          neque nostrum, officia quia repudiandae sed suscipit unde vel veniam voluptate? Aliquid asperiores at
+          blanditiis deserunt dolores earum eligendi ex, inventore ipsam iusto magni maiores mollitia natus nemo,
+          non
+          obcaecati officiis quibusdam quisquam quod quos reiciendis reprehenderit repudiandae temporibus voluptas
+          voluptatibus.
+        </p>
+        <p>
+          Accusamus adipisci aliquid amet aspernatur aut autem corporis culpa delectus deleniti dicta
+          dignissimos distinctio dolor, earum ex exercitationem illo incidunt ipsam laudantium mollitia nihil nisi
+          nostrum omnis provident quibusdam, quos recusandae rem reprehenderit repudiandae rerum sapiente sint
+          soluta
+          suscipit temporibus unde velit, voluptas voluptates!
+        </p>
+        <p>
+          Nemo, pariatur, totam? Aliquam atque eaque excepturi
+          explicabo facere fuga itaque labore, minima mollitia necessitatibus nemo, odit officia omnis pariatur
+          porro
+          possimus ratione repudiandae soluta suscipit vitae.
+        </p>
+        <p>
+          Facilis fugit laudantium nihil praesentium? Ab animi
+          consequuntur dicta error esse, facilis itaque maxime quam ratione sequi tempore ut. Alias blanditiis
+          deserunt
+          fugiat laboriosam natus odio praesentium sunt tempore velit. Dicta incidunt nam nesciunt nihil, saepe
+          soluta
+          tempora temporibus veritatis?
+        </p>
+        <p>
+          Adipisci animi est maxime totam. Aliquid autem, cum dolore eaque illum mollitia
+          possimus repellendus vel.
+        </p>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">expand_more</i>Третий документ</div>
+      <div class="collapsible-body taj">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem deserunt dicta dolor doloribus expedita
+          explicabo iste libero minima pariatur, perferendis porro rem reprehenderit saepe vel vitae voluptate?
+        </p>
+        <p>
+          Aperiam aspernatur blanditiis consequuntur error in minima nihil, numquam veniam voluptatem. Accusantium
+          earum error
+          ex facere, id, ipsa labore maiores maxime nostrum numquam optio, provident quisquam repellat vitae
+          voluptate?
+        </p>
+        <p>
+          At atque beatae eos laboriosam maxime praesentium repudiandae sint soluta tempora vero! Ab consequuntur
+          dolorum recusandae similique.
+        </p>
+        <p>
+          Accusamus hic in ipsam iste maiores minus, nesciunt quam sit tempora totam ut
+          veniam vero voluptas. At est ipsam iste modi nesciunt nostrum praesentium suscipit tenetur totam vitae.
+          Aliquid at atque, deleniti deserunt dolor dolores fuga impedit in, inventore laborum nostrum nulla odio
+          omnis
+          porro, quia suscipit vel vero.
+        </p>
+        <p>
+          Alias commodi consequatur, deleniti dolor esse expedita incidunt magni nemo
+          neque nostrum, officia quia repudiandae sed suscipit unde vel veniam voluptate? Aliquid asperiores at
+          blanditiis deserunt dolores earum eligendi ex, inventore ipsam iusto magni maiores mollitia natus nemo,
+          non
+          obcaecati officiis quibusdam quisquam quod quos reiciendis reprehenderit repudiandae temporibus voluptas
+          voluptatibus.
+        </p>
+        <p>
+          Accusamus adipisci aliquid amet aspernatur aut autem corporis culpa delectus deleniti dicta
+          dignissimos distinctio dolor, earum ex exercitationem illo incidunt ipsam laudantium mollitia nihil nisi
+          nostrum omnis provident quibusdam, quos recusandae rem reprehenderit repudiandae rerum sapiente sint
+          soluta
+          suscipit temporibus unde velit, voluptas voluptates!
+        </p>
+        <p>
+          Nemo, pariatur, totam? Aliquam atque eaque excepturi
+          explicabo facere fuga itaque labore, minima mollitia necessitatibus nemo, odit officia omnis pariatur
+          porro
+          possimus ratione repudiandae soluta suscipit vitae.
+        </p>
+        <p>
+          Facilis fugit laudantium nihil praesentium? Ab animi
+          consequuntur dicta error esse, facilis itaque maxime quam ratione sequi tempore ut. Alias blanditiis
+          deserunt
+          fugiat laboriosam natus odio praesentium sunt tempore velit. Dicta incidunt nam nesciunt nihil, saepe
+          soluta
+          tempora temporibus veritatis?
+        </p>
+        <p>
+          Adipisci animi est maxime totam. Aliquid autem, cum dolore eaque illum mollitia
+          possimus repellendus vel.
+        </p>
+      </div>
+    </li>
+  </ul>
+  <p>
+    <a href="/docs" class="blue-text text-darken-3 main-docs-link">Смотреть все документы</a>
+  </p>
+</div>
+
+<div class="section">
+  <h3>Контакты</h3>
+  <div class="row">
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s6">
+              <h5 class="mt0">Адрес</h5>
+              <p><i class="material-icons left">location_on</i>123456, Москва, Котельническая набережная д.17</p>
+            </div>
+            <div class="col s6">
+              <h5 class="mt0">График работы</h5>
+              <p><i class="material-icons left">schedule</i>9:00-18:00</p>
+            </div>
+          </div>
+          <h5 class="mt3">Email</h5>
+          <div class="row">
+            <div class="col s3">
+              <span><i class="material-icons left">mail</i>spk@mail.ru (Основная)</span>
+            </div>
+            <div class="col s6">
+              <span><i class="material-icons left">mail</i>spk2@mail.ru (Вопросы по работе сайта)</span>
+            </div>
+          </div>
+          <h5 class="mt3">Телефон</h5>
+          <div class="row">
+            <div class="col s3">
+              <span><i class="material-icons left">phone</i>+0 (123) 456-78-90</span>
+            </div>
+            <div class="col s3">
+              <span><i class="material-icons left">phone</i>+0 (123) 456-78-90</span>
+            </div>
+            <div class="col s3">
+              <span><i class="material-icons left">phone</i>+0 (123) 456-78-90</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

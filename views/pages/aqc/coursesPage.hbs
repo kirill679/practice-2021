@@ -1,0 +1,38 @@
+<h2>Курсы</h2>
+{{#if coursesGroups.length}}
+  {{#each coursesGroups}}
+    {{#if courses.length}}
+      <div class="section">
+        <h4>{{professionTitle}}</h4>
+        <div class="row">
+          {{#each courses}}
+            <div class="col s4">
+              <a href="/aqc/courses/id/{{_id}}">
+                <div class="card medium">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 center">
+                        <i class="material-icons aqc-category-card-icon blue-text text-darken-3">school</i>
+                      </div>
+                    </div>
+                    <div class="card-title grey-text text-darken-3">
+                      {{title}}
+                    </div>
+                    <p class="grey-text">
+                      {{qualificationTitle}}
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <div class="blue-text text-darken-3 aqc-category-card-title">Пройти курс</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/if}}
+  {{/each}}
+{{else}}
+  <h5>Курсы еще не добавлены</h5>
+{{/if}}

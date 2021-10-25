@@ -1,0 +1,140 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #1565c0;
+}
+
+.main-aqc-card-icon {
+    font-size: 6rem;
+}
+
+.main-docs-link {
+    font-size: 1.3rem;
+}
+
+.news-card-img {
+    height: 350px;
+    object-fit: cover;
+}
+
+.single-news-main-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.single-news-info {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.other-news-img {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.professions-item {
+    font-size: 1.3rem;
+}
+
+ul.dropdown-content.select-dropdown li:not(.disabled) span {
+    color: #1565c0;
+}
+
+.qualifications-item-link {
+    margin-left: 2rem;
+}
+
+.aqc-help-btn {
+    font-size: 1.3rem;
+}
+
+.aqc-help-modal-close {
+    margin-right: 2rem;
+}
+
+.aqc-category-card-icon {
+    font-size: 10rem;
+}
+
+.aqc-category-card-title {
+    font-size: 1.5rem;
+}
+
+.tabs .tab a {
+    color: #616161;
+}
+
+.tabs .tab a:hover {
+    background-color: #e3f2fd;
+    color: #424242;
+}
+
+.tabs .tab a.active {
+    background-color: #fff;
+    color: #1565c0;
+}
+
+.tabs .tab a.focus {
+    background-color: #1565c0;
+}
+
+.tabs .tab a:focus.active {
+    background-color: #fff !important;
+}
+
+.tabs .indicator {
+    background-color: #1565c0;
+}
+
+.aqc-tests-collection-item {
+    font-size: 1.2rem;
+}
+
+.aqc-courses-single-course-link {
+    font-size: 1.3rem;
+}
+
+.alert-red {
+    color: #e57373;
+}
+
+.alert-green {
+    border-left-color: #81c784;
+    color: #81c784;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+.mb0 {
+    margin-bottom: 0;
+}
+
+.mt2 {
+    margin-top: 2rem;
+}
+
+.mt3 {
+    margin-top: 3rem;
+}
+
+.mb2 {
+    margin-bottom: 2rem;
+}
+
+.taj {
+    text-align: justify;
+}
+

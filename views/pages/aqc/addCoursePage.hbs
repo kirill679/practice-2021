@@ -1,0 +1,40 @@
+<h2>Добавить курс</h2>
+<p>Это начальная версия страницы</p>
+{{#if qualificationsGroups.length}}
+  <div class="row">
+    <div class="col s12">
+      <form action="/aqc/courses/add" method="POST" autocomplete="off">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="title" type="text" class="validate" name="title" required>
+            <label for="title">Название курса</label>
+            <span class="helper-text" data-error="Некорректное название"></span>
+          </div>
+          <div class="input-field col s6">
+            <select name="qualificationId" required>
+              <option value="" disabled selected>Выберите квалификацию</option>
+              {{#each qualificationsGroups}}
+                {{#if qualifications.length}}
+                  <optgroup label="{{professionTitle}}">
+                    {{#each qualifications}}
+                      <option value="{{_id}}">{{../professionTitle}}, уровень {{degree}}</option>
+                    {{/each}}
+                  </optgroup>
+                {{/if}}
+              {{/each}}
+            </select>
+          </div>
+          <div class="input-field col s12">
+            <textarea name="text" id="textarea" class="materialize-textarea validate" required></textarea>
+            <label for="textarea">Содержимое курса</label>
+            <span class="helper-text" data-error="Некорректное содержимое курса"></span>
+          </div>
+        </div>
+        <button class="btn waves-effect waves-light blue darken-3" type="submit"><i class="material-icons left">done</i>Добавить
+        </button>
+      </form>
+    </div>
+  </div>
+{{else}}
+  <h5>Сначала необходимо добавить квалификацию</h5>
+{{/if}}

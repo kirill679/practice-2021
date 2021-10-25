@@ -1,0 +1,52 @@
+<h2>Редактировать курс</h2>
+{{#if qualificationsGroups.length}}
+<div class="row">
+  <div class="col s12">
+    <form action="/aqc/courses/edit" method="POST">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="title" type="text" class="validate" name="title" required value="{{course.title}}">
+          <label for="title">Название курса</label>
+          <span class="helper-text" data-error="Некорректное название"></span>
+        </div>
+        <div class="input-field col s6">
+          <select name="qualificationId" required>
+            <option value="" disabled selected>Выберите квалификацию</option>
+            {{#each qualificationsGroups}}
+              {{#if qualifications.length}}
+                <optgroup label="{{professionTitle}}">
+                  {{#each qualifications}}
+                    <option value="{{_id}}" {{#ifeq _id @root.selectedQualificationId}}selected{{/ifeq}}>{{../professionTitle}}, уровень {{degree}}</option>
+                  {{/each}}
+                </optgroup>
+              {{/if}}
+            {{/each}}
+          </select>
+        </div>
+        <div class="input-field col s12">
+          <textarea name="text" id="textarea" class="materialize-textarea validate" required>{{course.text}}</textarea>
+          <label for="textarea">Содержимое курса</label>
+          <span class="helper-text" data-error="Некорректное содержимое курса"></span>
+        </div>
+      </div>
+      <input type="hidden" name="id" value="{{course._id}}">
+      <button class="btn waves-effect waves-light blue darken-3" type="submit"><i class="material-icons left">done</i>Сохранить
+      </button>
+    </form>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s12">
+    <form action="/aqc/courses/delete" method="POST">
+      <input type="hidden" name="id" value="{{course._id}}">
+      <button class="btn waves-effect waves-light red darken-1"><i class="material-icons left">delete</i>Удалить
+        курс
+      </button>
+    </form>
+  </div>
+</div>
+
+{{else}}
+  <h5>Сначала необходимо добавить квалификации</h5>
+{{/if}}

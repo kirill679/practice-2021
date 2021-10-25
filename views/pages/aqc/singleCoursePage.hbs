@@ -1,0 +1,20 @@
+<h3>{{course.title}}</h3>
+<h5 class="mb2">Квалификация: {{profession.title}}, уровень {{qualification.degree}}</h5>
+<div class="row">
+  <div class="col s12">
+    <div class="card-panel mb2">
+      {{course.text}}
+    </div>
+    <p>
+      <a href="/aqc/courses" class="blue-text text-darken-3 aqc-courses-single-course-link">Смотреть другие курсы</a>
+    </p>
+    {{#if isAuth}}
+      {{#if isAdmin}}
+        <p>
+          <a href="/aqc/courses/id/{{course._id}}/edit" class="blue-text text-darken-3 aqc-courses-single-course-link">Изменить
+            курс</a>
+        </p>
+      {{/if}}
+    {{/if}}
+  </div>
+</div>

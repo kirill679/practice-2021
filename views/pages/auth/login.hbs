@@ -1,0 +1,54 @@
+
+<div class="row mt2">
+  <div class="col s12">
+    <ul class="tabs mb2">
+      <li class="tab col s6"><a class="active" href="#login">Войти</a></li>
+      <li class="tab col s6"><a href="#register">Регистрация</a></li>
+    </ul>
+  </div>
+  <div id="login" class="col s6 offset-s3">
+    {{#if loginError}}
+      <blockquote class="alert-red">{{loginError}}</blockquote>
+    {{/if}}
+    <h2>Войти в аккаунт</h2>
+    <form action="/auth/login" method="POST" autocomplete="off">
+      <div class="input-field col s12">
+        <input id="email" type="email" class="validate" name="email" required>
+        <label for="email">Email</label>
+        <span class="helper-text" data-error="Некорректный email"></span>
+      </div>
+      <div class="input-field col s12">
+        <input id="password" type="password" class="validate" name="password" required>
+        <label for="password">Пароль</label>
+        <span class="helper-text" data-error="Некорректный пароль"></span>
+      </div>
+      <button class="btn waves-effect waves-light blue darken-3" type="submit"><i class="material-icons left">login</i>Войти
+      </button>
+    </form>
+  </div>
+  <div id="register" class="col s6 offset-s3">
+    {{#if registerError}}
+      <blockquote class="red-text text-lighten-2">{{registerError}}</blockquote>
+    {{/if}}
+    <h2>Создать аккаунт</h2>
+    <form action="/auth/register" method="POST" autocomplete="off">
+      <div class="input-field col s12">
+        <input id="name" type="text" class="validate" name="name" required>
+        <label for="name">Ваше имя</label>
+        <span class="helper-text" data-error="Некорректное имя"></span>
+      </div>
+      <div class="input-field col s12">
+        <input id="remail" type="email" class="validate" name="email" required>
+        <label for="remail">Email</label>
+        <span class="helper-text" data-error="Некорректный email"></span>
+      </div>
+      <div class="input-field col s12">
+        <input id="rpassword" type="password" class="validate" name="password" required>
+        <label for="rpassword">Пароль</label>
+        <span class="helper-text" data-error="Некорректный пароль"></span>
+      </div>
+      <button class="btn waves-effect waves-light blue darken-3" type="submit">Зарегистрироваться
+      </button>
+    </form>
+  </div>
+</div>

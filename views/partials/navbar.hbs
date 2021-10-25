@@ -1,0 +1,64 @@
+<nav class="blue darken-3">
+  <div class="nav-wrapper">
+    <div class="container">
+      <a href="/" class="brand-logo left">СПК РФ</a>
+      <ul id="nav-mobile" class="right">
+        {{#if isMain}}
+          <li class="active"><a href="/">Главная</a></li>
+        {{else}}
+          <li><a href="/">Главная</a></li>
+        {{/if}}
+
+        {{#if isAuth}}
+          {{#if isAQC}}
+            <li class="active"><a href="/aqc">ЦОК</a></li>
+          {{else}}
+            <li><a href="/aqc">ЦОК</a></li>
+          {{/if}}
+        {{/if}}
+
+
+        {{#if isQualifications}}
+          <li class="active"><a href="/qualifications">Квалификации</a></li>
+        {{else}}
+          <li><a href="/qualifications">Квалификации</a></li>
+        {{/if}}
+        {{#if isNews}}
+          <li class="active"><a href="/news">Новости</a></li>
+        {{else}}
+          <li><a href="/news">Новости</a></li>
+        {{/if}}
+        {{#if isDocs}}
+          <li class="active"><a href="/docs">Документы</a></li>
+        {{else}}
+          <li><a href="/docs">Документы</a></li>
+        {{/if}}
+        {{#if isContacts}}
+          <li class="active"><a href="/contacts">Контакты</a></li>
+        {{else}}
+          <li><a href="/contacts">Контакты</a></li>
+        {{/if}}
+
+        {{#if isAuth}}
+          {{#if isAdmin}}
+            {{#if isManage}}
+              <li class="active"><a href="/manage">Управлять</a></li>
+            {{else}}
+              <li><a href="/manage">Управлять</a></li>
+            {{/if}}
+          {{/if}}
+
+          <li><a href="/auth/logout">Выйти</a></li>
+        {{else}}
+          {{#if isLogin}}
+            <li class="active"><a href="/auth/login">Войти</a></li>
+          {{else}}
+            <li><a href="/auth/login">Войти</a></li>
+          {{/if}}
+        {{/if}}
+
+
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,44 @@
+<br>
+<div class="row">
+  <div class="col s8">
+    <div class="card">
+      <div class="card-content">
+        <h2 class="mt0">{{singleNews.title}}</h2>
+        <p class="grey-text text-darken-1 single-news-info">
+          <span class="date">{{singleNews.dateAdded}}</span>
+        </p>
+        <br>
+        <img class="single-news-main-img" src="{{singleNews.imgUrl}}" alt="{{singleNews.title}}">
+        <br>
+        <br>
+        <p class="taj">
+          {{singleNews.text}}
+        </p>
+      </div>
+    </div>
+  </div>
+  {{#if otherNews.length}}
+    <div class="col s4">
+      <div class="card">
+        <div class="card-content">
+          <h4>Последние новости</h4>
+          <div class="row">
+            {{#each otherNews}}
+              <div class="col s12">
+                <div class="section">
+                  <a href="/news/id/{{_id}}">
+                    <img src="{{imgUrl}}" alt="{{title}}" class="other-news-img">
+                  </a>
+                  <a class="blue-text text-darken-3" href="/news/id/{{_id}}">
+                    <h5 class="mt0 truncate">{{title}}</h5>
+                  </a>
+                  <div class="truncate grey-text text-darken-1">{{text}}</div>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/if}}
+</div>

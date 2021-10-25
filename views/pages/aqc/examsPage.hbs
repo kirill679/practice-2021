@@ -1,0 +1,62 @@
+<h2>Экзамены</h2>
+{{#if examFail}}
+  <blockquote class="alert-red">
+    {{examFail}}
+  </blockquote>
+{{/if}}
+{{#if examSuccess}}
+  <blockquote class="alert-green">
+    {{examSuccess}}
+  </blockquote>
+{{/if}}
+{{#if passedExams}}
+  <div class="section">
+    <h4>Ваши квалификации</h4>
+    <ul class="collection aqc-tests-collection-item">
+      {{#each passedExams}}
+        <li class="collection-item">
+            {{qualificationTitle}}</span>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+{{/if}}
+{{#if examsGroups.length}}
+  {{#each examsGroups}}
+    {{#if exams.length}}
+      <div class="section">
+        <h4>{{professionTitle}}</h4>
+        <div class="row">
+          {{#each exams}}
+            <div class="col s4">
+              <a href="/aqc/exams/id/{{_id}}">
+                <div class="card medium">
+                  <div class="card-content">
+                    <div class="row">
+                      <div class="col s12 center">
+                        <i class="material-icons aqc-category-card-icon blue-text text-darken-3">description</i>
+                      </div>
+                    </div>
+                    <div class="card-title grey-text text-darken-3 ">
+                      {{examTitle}}
+                    </div>
+                    <p class="grey-text">
+                      {{qualificationTitle}}
+                    </p>
+                  </div>
+                  <div class="card-action">
+                    <div class="blue-text text-darken-3 aqc-category-card-title">Пройти экзамен</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    {{/if}}
+  {{/each}}
+{{else}}
+  <h5>Экзамены еще не добавлены</h5>
+{{/if}}
+
+
